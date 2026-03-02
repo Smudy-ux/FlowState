@@ -1,12 +1,13 @@
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import express from 'express';
-
+import taskRoutes from './routes/taskRoutes.route.js';
+import cookieParser from 'cookie-parser';
 dotenv.config();
 
 const app = express();
 
-mongoose.connect(process.env.MONGO_URI as string, {
+mongoose.connect(process.env.MONGO_URI, {
 }).then(() => {
     console.log('Connected to MongoDB');
 }).catch((err) => {
@@ -14,8 +15,7 @@ mongoose.connect(process.env.MONGO_URI as string, {
 })
 
 app.use(express.json());
-
-import taskRoutes from './routes/taskRoutes.route.js';
+app.use(cookieParser());
 
 
 app.use('/api', taskRoutes);
