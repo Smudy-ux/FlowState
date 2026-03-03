@@ -26,6 +26,6 @@ export const createCoopTask = async (req, res) => {
         res.status(201).json({ message: 'Cooperative task created successfully', coopTask: newCoopTask });
     } catch (error) {
         console.error("Creation Error:", error);
-        res.status(500).json({ message: 'Error creating cooperative task', error: error.message });
+        res.status(400).json({ message: 'Error creating cooperative task', error: error.message });
     }
 };
