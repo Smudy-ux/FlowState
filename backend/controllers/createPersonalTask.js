@@ -1,5 +1,4 @@
-import Task from '../models/personalTaskSchema.js';
-
+import personalTaskSchema from "../models/personalTaskSchema.js";
 export const createTask = async (req, res) => {
     try {
         const userId = req.user.id;

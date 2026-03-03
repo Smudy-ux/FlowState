@@ -1,9 +1,10 @@
- import express from 'express';
+import express from 'express';
 import { getTasks } from '../controllers/taskController.js';
 import { authMiddleware } from '../middleware/authMiddleware.js';
 import { register } from '../controllers/register.controller.js';
 import { login } from '../controllers/login.controller.js';
-import { createTask } from '../controllers/createTask.js';
+import { logout } from '../controllers/logout.controller.js';
+import { createTask } from '../controllers/createPersonalTask.js';
 import { createCoopTask } from '../controllers/createCoopTask.js';
 import { joinCoopTask } from '../controllers/joinCoopTask.js';
 import { updateTask } from '../controllers/updateTask.js';

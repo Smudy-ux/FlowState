@@ -1,4 +1,4 @@
-import Task from '../models/Task.js';
+import personalTaskSchema from "../models/personalTaskSchema.js";
 
 export const updateTask = async (req, res) => {
     try {
