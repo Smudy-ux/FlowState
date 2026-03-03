@@ -19,6 +19,6 @@ router.post('/coop-tasks', authMiddleware, createCoopTask);
 router.post('/coop-tasks/:coopTaskId/join', authMiddleware, joinCoopTask);
 router.post('/register', register);
 router.post('/login', login);
-
+router.post('/logout', authMiddleware, logout);
 
 export default router;
